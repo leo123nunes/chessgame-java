@@ -9,6 +9,9 @@ public class Board {
 	}
 
 	public Board(int rows, int columns) {
+		if(rows<1||columns<1) {
+			throw new BoardGameException("Rows and Columns must be more than 0.");
+		}
 		this.rows = rows;
 		this.columns = columns;
 		pieces = new Piece[rows][columns];
@@ -18,16 +21,8 @@ public class Board {
 		return rows;
 	}
 
-	public void setRows(int rows) {
-		this.rows = rows;
-	}
-
 	public int getColumns() {
 		return columns;
-	}
-
-	public void setColumns(int columns) {
-		this.columns = columns;
 	}
 	
 	public Piece piece(int row, int column) {
@@ -39,9 +34,17 @@ public class Board {
 	}
 	
 	public void placePiece(Piece piece, Position position) {
+		thereIsAPiece(position);
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
 	
-	
+	private void thereIsAPiece(Position position) {
+		if(position.getRow()>=this.getRows()||position.getColumn()>=this.getColumns()) {
+			throw new BoardGameException("This position doesn't exist.");
+		}
+		if(pieces[position.getRow()][position.getColumn()]!=null) {
+			throw new BoardGameException("This position is already used.");
+		}
+	}
 }
