@@ -39,7 +39,7 @@ public class Board {
 		piece.position = position;
 	}
 	
-	private void thereIsAPiece(Position position) {
+	public void thereIsAPiece(Position position) {
 		if(position.getRow()>=this.getRows()||position.getColumn()>=this.getColumns()) {
 			throw new BoardGameException("This position doesn't exist.");
 		}
@@ -47,4 +47,29 @@ public class Board {
 			throw new BoardGameException("This position is already used.");
 		}
 	}
+	
+	public void thereIsAPieceSource(Position position) {
+		if(pieces[position.getRow()][position.getColumn()]==null) {
+			throw new BoardGameException("There is no piece in source.");
+		}
+	}
+	
+	public Piece removePiece(Position position) {
+		if(!positionExists(position.getRow(),position.getColumn())) {
+			throw new BoardGameException("Posiion not on the board.");
+		}
+		if(piece(position)==null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getRow()][position.getColumn()] = null;
+		return aux;
+	}
+	
+	private boolean positionExists(int row, int column) {
+		return row >= 0 && row < rows && column >= 0 && column <columns;
+	}
+	
+	
 }
