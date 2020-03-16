@@ -34,17 +34,15 @@ public class Board {
 	}
 	
 	public void placePiece(Piece piece, Position position) {
-		thereIsAPiece(position);
+		positionExists(position);
+		//thereIsAPieceSource(position);
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
 	
-	public void thereIsAPiece(Position position) {
+	public void positionExists(Position position) {
 		if(position.getRow()>=this.getRows()||position.getColumn()>=this.getColumns()) {
 			throw new BoardGameException("This position doesn't exist.");
-		}
-		if(pieces[position.getRow()][position.getColumn()]!=null) {
-			throw new BoardGameException("This position is already used.");
 		}
 	}
 	
@@ -67,8 +65,16 @@ public class Board {
 		return aux;
 	}
 	
-	private boolean positionExists(int row, int column) {
-		return row >= 0 && row < rows && column >= 0 && column <columns;
+	public boolean positionExists(int row, int column) {
+		return row >= 0 && row < rows && column >= 0 && column < columns;
+	}
+
+	public boolean thereIsAPiece(Position position) {
+		if(pieces[position.getRow()][position.getColumn()] == null) {
+			return false;
+		}else {
+			return true;
+		}
 	}
 	
 	
