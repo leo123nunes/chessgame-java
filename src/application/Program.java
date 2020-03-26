@@ -41,7 +41,7 @@ public class Program {
 		
 		if(capturedPiece!=null) {
 			capturedPieces.add(capturedPiece);
-		}
+		}	
 		
 		
 		if(chessMatch.getPromoted() != null) {
