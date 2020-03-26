@@ -37,9 +37,17 @@ public class Program {
 		ChessPosition target = UI.readChessPosition(sc);
 		
 		ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
+	
 		
 		if(capturedPiece!=null) {
 			capturedPieces.add(capturedPiece);
+		}
+		
+		
+		if(chessMatch.getPromoted() != null) {
+			System.out.print("Enter the piece for promotion (B/N/R/Q): ");
+			String type = sc.nextLine();
+			chessMatch.replacePromotedPiece(type);
 		}
 		
 		
