@@ -46,6 +46,13 @@ public class Board {
 		}
 	}
 	
+	public boolean positionExistss(Position position) {
+		if(position.getRow()>=this.getRows()||position.getColumn()>=this.getColumns()) {
+			return false;
+		}
+		return true;
+	}
+	
 	public void thereIsAPieceSource(Position position) {
 		if(pieces[position.getRow()][position.getColumn()]==null) {
 			throw new BoardGameException("There is no piece in source.");
