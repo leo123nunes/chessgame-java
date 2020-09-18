@@ -1,6 +1,6 @@
-# Project4-ChessGameInConsole
+# Java-ChessGameInConsole
 
-Olá, o projeto a seguir é um jogo de Xadrez que foi feito tendo como base o console do GitHub(Git Bash Here). O motivo do uso do console do Git foi poder utilizar e demonstrar as cores das peças e movimentos com mais facilidade. O projeto possui uma pasta contendo as imagens do jogo quando finalizado em funcionamento.
+O projeto a seguir é um jogo de Xadrez que foi feito tendo como base o console do GitHub(Git Bash Here). O motivo do uso do console do Git foi poder utilizar e demonstrar as cores das peças e movimentos com mais facilidade. O projeto possui uma pasta contendo as imagens do jogo quando finalizado em funcionamento.
 
 # Times, Peças e Cores
 
