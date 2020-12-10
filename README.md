@@ -1,18 +1,17 @@
 # Java-ChessGameInConsole
+Chess game that was made based on the GitHub console (Git Bash Here). The reason for using the Git console was to be able to use and demonstrate the colors of the pieces and movements more easily.
 
-Jogo de Xadrez que foi feito tendo como base o console do GitHub(Git Bash Here). O motivo do uso do console do Git foi poder utilizar e demonstrar as cores das peças e movimentos com mais facilidade.
+# Teams, pieces and colors
 
-# Times, Peças e Cores
-
-O jogo está em inglês. As peças "P" são os peões, as peças "K" são os cavalos, as peças "B" são os bispos, as peças "K" são os reis, as peças "R" são as torres e as peças "Q" são as rainhas. O jogo necessita de 2 jogadores de times diferentes para ser jogado, um no time branco que possui as peças brancas e outro no time preto que possui as peças amarelas no campo. Com o decorrer do jogo o campo mostra as peças que já foram capturadas, o turno atual, e se algum jogador está em check.  A cada turno é a vez de um jogador de fazer o movimento, caso o jogador escolha a peça errada ou tente fazer algum movimento inválido o jogo emite uma mensagem e impede o movimento, pedindo assim outro movimento, até que este sejá válido. As posições em azul que aparecem no campo após o jogador escolher a peça a ser movimentada mostra os possíveis lugares para movimento da peça. As linhas e colunas do campo para identificarem as peças e movimentos são identificadas respectivamente pelos numeros de 8 a 1 e pelas letras "a" a "h", sendo que para escolher uma peça e fazer um movimento o jogador tem que escrever a coluna primeiro e a linha depois, e logo em seguida apertar a tecla enter. O jogo termina quando algum jogador fica em checkmate, com o campo mostrando o jogador vencedor da partida.
-
+The game is in English. "P" pieces are pawns, "K" pieces are knights, "B" pieces are bishops, "K" pieces are kings, "R" pieces are towers and "Q" pieces are the queens. The game needs 2 players from different teams to be played, one on the white team that has the white pieces and the other on the black team that has the yellow pieces on the field. As the game progresses, the field shows the pieces that have already been captured, the current turn, and whether any players are in check. At each turn, it is the player's turn to make the move, if the player chooses the wrong piece or tries to make an invalid move the game sends a message and prevents the move, thus asking for another move, until it is valid. The blue positions that appear on the field after the player chooses the piece to be moved show the possible places for the piece to move. The lines and columns of the field to identify the pieces and movements are identified respectively by the numbers 8 to 1 and by the letters "a" to "h", and to choose a piece and make a move the player must write the column first and the line after, and then immediately press the enter key. The game ends when a player is in checkmate, with the field showing the winning player of the game.
 
 
-# Linguagem de programação 
+
+# Programming language
 Java.
 
 # IDE
 Eclipse Java EE IDE Version: 2018-09 (4.9.0).
 
-# Bibliotecas
+# Library
 Java SE versão 10.
